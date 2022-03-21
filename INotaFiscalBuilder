@@ -1,0 +1,23 @@
+package fernandodmoraes.com.guithub.Interfaces;
+
+import java.util.ArrayList;
+import java.util.Date;
+import fernandodmoraes.com.guithub.Mpoo.DocCliente;
+import fernandodmoraes.com.guithub.Mpoo.DocEmissor;
+import fernandodmoraes.com.guithub.Mpoo.NomeCliente;
+import fernandodmoraes.com.guithub.Mpoo.NomeEmissor;
+import fernandodmoraes.com.guithub.Mpoo.Produto;
+
+public interface INotaFiscalBuilder  {
+	
+	public void setDataEmissao(Date data);
+	public void setNumero(String Numero);
+	public void setChave(String chave);
+	public void setNomeEmissor(NomeEmissor nomeEmissor);
+	public void setDocEmissor(DocEmissor docEmissor);
+	public void setNomeCliente(NomeCliente nomeCliente);
+	public void setDocCliente(DocCliente docCLiente);
+	
+	public void setListaProdutos(ArrayList<Produto> listaProdutos);
+	
+}
