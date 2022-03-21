@@ -1,0 +1,25 @@
+package fernandodmoraes.com.guithub.Mpoo;
+
+public class Cliente {
+
+	private DocCliente docCliente;
+	private NomeCliente nomeCliente;
+	
+	public Cliente(NomeCliente nomeCliente, DocCliente docCliente) {
+		this.docCliente = docCliente;
+		this.nomeCliente = nomeCliente;
+	}
+	public DocCliente getDocCliente() {
+		return docCliente;
+	}
+
+	public void setDocCliente(DocCliente docCliente) {
+		this.docCliente = docCliente;
+	}
+	public NomeCliente getNomeCliente() {
+		return nomeCliente;
+	}
+	public void setNomeCliente(NomeCliente nomeCliente) {
+		this.nomeCliente = nomeCliente;
+	}
+}
