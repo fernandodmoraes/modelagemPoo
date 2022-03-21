@@ -1,0 +1,25 @@
+package fernandodmoraes.com.guithub.Mpoo;
+
+public class DocEmissor {
+	
+	private String cnpj;
+	private String insEstadual;
+	
+	public DocEmissor (String cnpj, String insEstadual) {
+		this.insEstadual = insEstadual;
+		this.insEstadual = insEstadual;
+	}
+	public String getCnpj() {
+		return cnpj;
+	}
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
+	}
+	public String getInsEstadual() {
+		return insEstadual;
+	}
+	public void setInsEstadual(String insEstadual) {
+		this.insEstadual = insEstadual;
+	}
+
+}
