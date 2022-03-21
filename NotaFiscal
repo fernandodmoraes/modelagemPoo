@@ -1,0 +1,118 @@
+package fernandodmoraes.com.guithub.Mpoo;
+import java.util.ArrayList;
+import java.util.Date;
+
+public class NotaFiscal {
+	
+	private String numero;
+	private Date data;
+	private String chave;
+	
+	private NomeEmissor nomeEmissor;
+	private DocEmissor docEmissor;
+	private	NomeCliente nomeCliente;
+	private DocCliente docCliente;
+	
+	private ArrayList<Produto> produtos = new ArrayList<>();
+		
+	
+	public NotaFiscal(String numero, Date data, String chave, NomeEmissor nomeEmissor, DocEmissor docEmissor, NomeCliente nomeCliente,
+			DocCliente docCliente, ArrayList<Produto> produtos) {
+		
+		this.numero = numero;
+		this.data = data;
+		this.chave = chave;
+		this.nomeCliente = nomeCliente;
+		this.docEmissor = docEmissor;
+		this.docCliente = docCliente;
+		this.produtos = produtos;
+	}
+	public String getNumero() {
+		return numero;
+	}
+	public void setNumero(String numero) {
+		this.numero = numero;
+	}
+	public Date getData() {
+		return data;
+	}
+	public void setData(Date data) {
+		this.data = data;
+	}
+	public String getChave() {
+		return chave;
+	}
+	public void setChave(String chave) {
+		this.chave = chave;
+	}
+	public NomeEmissor getNomeEmissor() {
+		return nomeEmissor;
+	}
+	public void setNomeEmissor(NomeEmissor nomeEmissor) {
+		this.nomeEmissor = nomeEmissor;
+	}
+	public DocEmissor getDocEmissor() {
+		return docEmissor;
+	}
+	public void setDocEmissor(DocEmissor docEmissor) {
+		this.docEmissor = docEmissor;
+	}
+	public NomeCliente getNomeCliente() {
+		return nomeCliente;
+	}
+	public void setNomeCliente(NomeCliente nomeCliente) {
+		this.nomeCliente = nomeCliente;
+	}
+	public DocCliente getDocCliente() {
+		return docCliente;
+	}
+	public void setDocCliente(DocCliente docCliente) {
+		this.docCliente = docCliente;
+	}
+	public ArrayList<Produto> getProdutos() {
+		return produtos;
+	}
+	public void setProdutos(ArrayList<Produto> produtos) {
+		this.produtos = produtos;
+	}
+
+	public void imprimiNota() {
+		System.out.println(this.getNumero());
+		System.out.println(this.getData());
+		System.out.println(this.getChave());
+		System.out.println(this.getDocEmissor().getCnpj());
+		System.out.println(this.getDocEmissor().getInsEstadual());
+		System.out.println(this.getNomeEmissor().getNomeFantasia());
+		System.out.println(this.getNomeEmissor().getNomeRazao());
+		System.out.println(this.getNomeCliente().getNomeCli());
+		System.out.println(this.getNomeCliente().getSobrenome());
+		System.out.println(this.getDocCliente().getCpf());
+		System.out.println(this.getDocCliente().getRg());
+		System.out.println(this.getProdutos().get(0));	
+	}
+	
+	@Override
+		public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("----- DADOS NOTA FISCAL ------\n");
+		sb.append("Número: " + getNumero() + "\n");
+		sb.append("Data Emissão: " + getData() + "\n");
+		sb.append("Chave : " + getChave() + "\n");
+		sb.append("\n");
+		sb.append("----- DADOS DO EMISSOR ------\n");
+		sb.append("Razão Social : " + getNomeEmissor().getNomeRazao() + "\n");
+		sb.append("Nome Fantasia: " + getNomeEmissor().getNomeFantasia() + "\n");
+		sb.append("CNPJ: " + getDocEmissor().getCnpj() + "\n");
+		sb.append("Inscrição Estadual: " + getDocEmissor().getInsEstadual() + "\n");
+		sb.append("\n");
+		sb.append("----- DADOS DO CLIENTE ------\n");
+		sb.append("Nome: " + getNomeCliente().getNomeCli() + "\n");
+		sb.append("Sobrenome: " + getNomeCliente().getSobrenome() + "\n");
+		sb.append("CPF: " + getDocCliente().getCpf() + "\n");
+		sb.append("RG : " + getDocCliente().getRg() + "\n");
+		sb.append("\n");
+		sb.append("Produto: " + getProdutos() + "\n");
+			return sb.toString();		
+	}
+	
+}
