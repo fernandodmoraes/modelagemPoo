@@ -1,0 +1,24 @@
+package fernandodmoraes.com.guithub.Mpoo;
+import java.util.Date;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+
+public class ProgramaPoo {
+public static void main(String[] args) {
+		NomeCliente nomeCliente = new NomeCliente ("Joãozinho", "do Teste");
+		DocCliente docCliente = new DocCliente ("012.896.225-87", 87254419);
+		NomeEmissor nomeEmissor = new NomeEmissor ("Os Amiguinhos do Computador", "Lenovo");
+		DocEmissor docEmissor = new DocEmissor ("015986254/0001-84", "ISENTO");
+		Produto produto1 = new Produto ("S145", "IdealPad", "Notbook IdealPad S145 - 8GB de RAM - 256SSD", 1 , new BigDecimal(4253.00));
+		Produto produto2 = new Produto ("T18", "Dell", "Teclado Dell mecanico", 1, new BigDecimal(112.80));
+		Produto produto3 = new Produto ("M55", "Dell", "Mouse optico ultra rapido", 2, new BigDecimal(62.50));
+		ArrayList<Produto> listaProduto = new ArrayList<>();
+		listaProduto.add(produto1);
+		listaProduto.add(produto2);
+		listaProduto.add(produto3);
+		
+		NotaFiscal notaFiscal = new NotaFiscal ("001/205878", new Date(), "87545874511245215521244845494564546544", 
+				nomeEmissor, docEmissor, nomeCliente, docCliente, listaProduto);
+		System.out.println(notaFiscal);
+	}
+}
