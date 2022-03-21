@@ -1,0 +1,25 @@
+package fernandodmoraes.com.guithub.Mpoo;
+
+public class NomeCliente {
+		
+	private String nomeCli;
+	private String sobrenome;
+	
+	public NomeCliente(String nomeCli, String sobrenome) {
+		super();
+		this.nomeCli = nomeCli;
+		this.sobrenome = sobrenome;
+	}
+	public String getNomeCli() {
+		return nomeCli;
+	}
+	public void setNomeCli(String nomeCli) {
+		this.nomeCli = nomeCli;
+	}
+	public String getSobrenome() {
+		return sobrenome;
+	}
+	public void setSobrenome(String sobrenome) {
+		this.sobrenome = sobrenome;
+	}
+}
