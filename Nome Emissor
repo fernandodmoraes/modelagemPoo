@@ -1,0 +1,39 @@
+package fernandodmoraes.com.guithub.Mpoo;
+
+public class NomeEmissor {
+	
+	private String nomeRazao;
+	private String nomeFantasia;
+	private final Integer TAMANHO_MAXIMO_DO_NOME = 5;
+
+	public NomeEmissor (String nomeRazao, String nomeFantasia) {
+		try {
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		this.nomeRazao = nomeRazao;
+		this.nomeFantasia = nomeFantasia;
+	}
+	public String getNomeRazao() {
+				return nomeRazao;
+	}
+	public void setNomeRazao(String nomeRazao) throws Exception {
+		if (validaTamanhoNomeRazao (nomeRazao)) {
+			this.nomeRazao = nomeRazao;
+		} else {
+			throw new Exception ("Emissor Inválido");
+		}
+}
+	public String getNomeFantasia() {
+		return nomeFantasia;
+	}
+	public void setNomeFantasia(String nomeFantasia) {
+		this.nomeFantasia = nomeFantasia;
+	}
+	private Boolean validaTamanhoNomeRazao(String nomeRazao) throws Exception{
+		if (nomeRazao.length() <TAMANHO_MAXIMO_DO_NOME) {
+			throw new Exception ("Nome menor que 5");
+		}
+		return true;
+	}
+}
