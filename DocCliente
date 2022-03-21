@@ -1,0 +1,24 @@
+package fernandodmoraes.com.guithub.Mpoo;
+
+public class DocCliente {
+	
+	private String cpf;
+	private Integer rg;
+	
+	public DocCliente(String cpf, Integer rg) {
+		this.cpf = cpf;
+		this.rg = rg;
+	}
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	public Integer getRg() {
+		return rg;
+	}
+	public void setRg(Integer rg) {
+		this.rg = rg;
+	}
+}
