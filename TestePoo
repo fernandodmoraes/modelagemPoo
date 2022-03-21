@@ -1,0 +1,38 @@
+package fernandodmoraes.com.guithub.Interfaces;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Date;
+import fernandodmoraes.com.guithub.Mpoo.DocCliente;
+import fernandodmoraes.com.guithub.Mpoo.DocEmissor;
+import fernandodmoraes.com.guithub.Mpoo.NomeCliente;
+import fernandodmoraes.com.guithub.Mpoo.NomeEmissor;
+import fernandodmoraes.com.guithub.Mpoo.NotaFiscal;
+import fernandodmoraes.com.guithub.Mpoo.Produto;
+
+public class TestePoo {
+	public static void main(String[] args) {
+		NomeCliente nomeCliente = new NomeCliente ("Joãozinho", "do Teste");
+		DocCliente docCliente = new DocCliente ("012.896.225-87", 87254419);
+		NomeEmissor nomeEmissor = new NomeEmissor ("Os Amiguinhos do Computador", "Lenovo");
+		DocEmissor docEmissor = new DocEmissor ("015986254/0001-84", "ISENTO");
+		
+		Produto produto1 = new Produto ("C123", "Produto teste", "Descrição teste", 8, new BigDecimal(9999.00));
+		
+		ArrayList<Produto> listaProdutos = new ArrayList<Produto>();
+		listaProdutos.add(produto1);
+		
+		NotaFiscalBuilder nfBuilder = new NotaFiscalBuilder();
+			nfBuilder.setDataEmissao(new Date());
+			nfBuilder.setNumero("98585478-5858");
+			nfBuilder.setChave("8585845875942164431649451");
+			nfBuilder.setNomeCliente(nomeCliente);
+			nfBuilder.setDocCliente (docCliente);
+			nfBuilder.setNomeEmissor(nomeEmissor);
+			nfBuilder.setDocEmissor (docEmissor);
+			nfBuilder.setListaProdutos(listaProdutos);
+		NotaFiscal nf = nfBuilder.gera();
+		
+				
+		System.out.println(nf);
+	}
+}
