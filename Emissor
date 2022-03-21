@@ -1,0 +1,26 @@
+package fernandodmoraes.com.guithub.Mpoo;
+
+public class Emissor {
+	
+	private NomeEmissor nomeEmissor;
+	private DocEmissor docEmissor;
+		
+	public Emissor(NomeEmissor nomeEmissor, DocEmissor docEmissor) {
+		
+		this.nomeEmissor = nomeEmissor;
+		this.docEmissor = docEmissor;
+	}
+	public NomeEmissor getNomeEmissor() {
+		return nomeEmissor;
+	}
+
+	public void setNomeEmissor(NomeEmissor nomeEmissor) {
+		this.nomeEmissor = nomeEmissor;
+	}
+	public DocEmissor getDocEmissor() {
+		return docEmissor;
+	}
+	public void setDocEmissor(DocEmissor docEmissor) {
+		this.docEmissor = docEmissor;
+	}
+}
